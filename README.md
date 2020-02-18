@@ -34,7 +34,7 @@ $ npm install
 # Run the project
 $ npm start
 ```
-# open the browser and paste:
+open the browser and paste:
 http://localhost:3333/
 
 
