@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <img src="./files/MaratonaDev3/logo.png" alt="Doe" class="logo">
+    <img src="/logo.png" alt="Doe" class="logo">
     <h2>A sua doação importa</h2>
     <p>Até 3 vidas com 1 doação</p>
     <p>Mais de 38.000 doações são necessárias todos os dias</p>
@@ -21,7 +21,7 @@
 
   <section class="form hide">
     <h2>Entre na lista de doadores</h2>
-    <form action="/">
+    <form action="/" method="POST">
       <input type="text" name="name" placeholder="Nome completo">
       <input type="text" name="email" placeholder="Email">
       <input type="text" name="blood" placeholder="Tipo sanguíneo">
@@ -32,22 +32,14 @@
   <main>
     <h2>Ultimos <span>doadores</span></h2>
     <section class="donors">
+      
+      {% for donor in donors %}
+      
       <div class="donor">
-        <div class="blood">AB+</div>
-        <p>Diego Fernandes</p>
+        <div class="blood">{{donor.blood}}</div>
+        <p>{{donor.name}}</p>
       </div>
-      <div class="donor">
-        <div class="blood">B+</div>
-        <p>Cleiton Souza</p>
-      </div>
-      <div class="donor">
-        <div class="blood">A+</div>
-        <p>Robson Marques</p>
-      </div>
-      <div class="donor">
-        <div class="blood">O+</div>
-        <p>Mayk Brito</p>
-      </div>
+      {%endfor%}
     </section>
   </main>
 
@@ -57,6 +49,6 @@
 
 </body>
 
-<script src="./scripts.js"></script>
+<script src="/scripts.js"></script>
 
 </html>
